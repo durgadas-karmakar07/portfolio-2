@@ -831,58 +831,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnModalDownloadCv) {
     btnModalDownloadCv.addEventListener('click', () => {
-      // Generate clean downloadable formatted text file
-      const cvText = `===========================================================
-DURGADAS KARMAKAR
-Backend Developer & DevOps Enthusiast | Information Technology
-Phone: +91 9635297320
-Email: durgadaskarmakar.dev@gmail.com
-Location: Raghunathpur, West Bengal, India
-LinkedIn: https://www.linkedin.com/in/durgadas-karmakar-62181534b
-GitHub: https://github.com/Durgadas-Karmakar
-===========================================================
-
-EXECUTIVE SUMMARY:
-Results-driven Information Technology engineer specializing in high-performance backend systems, RESTful API design, relational database architecture, and automated CI/CD deployment pipelines. Experienced with real-time distributed telemetry, containerization with Docker, and cloud deployments.
-
-EDUCATION:
-- B.Tech in Information Technology: Bengal College of Engineering & Technology (2023 - Present)
-- Higher Secondary Education: Raghunathpur, West Bengal (2023)
-
-WORK EXPERIENCE:
-1. Backend & Cloud Architect – Rescuen (Oct 2025 - Mar 2026)
-   - Architected real-time WebSocket channels, offline SMS trigger fallback, emergency responder dispatch APIs, and spatial PostgreSQL queries.
-   - Reduced emergency alert dispatch latency to sub-second range with 99.9% uptime.
-2. Artificial Intelligence Intern – EDU TANTR (Aug 2025 - Oct 2025)
-   - Constructed deep neural network models, evaluated computer vision pipelines, and integrated ML models into software workflows.
-
-TECHNICAL SKILLS:
-- Backend & APIs: RESTful API Design, JWT Authentication, WebSockets, Microservices, Postman
-- Programming Languages: Java, Python, C, C++, JavaScript (Node.js), SQL
-- DevOps & Cloud: Docker, CI/CD Pipelines (GitHub Actions), Git & GitHub, Linux/Shell, AWS, Firebase
-- Databases & Core CS: PostgreSQL, MySQL, Data Structures & Algorithms, AI/ML, System Design
-
-KEY PROJECTS:
-1. Rescuen: Real-Time Emergency Safety & Dispatch Platform (REST APIs, Docker, WebSockets, PostgreSQL)
-   - Live on Google Play Store: https://play.google.com/store/apps/details?id=com.subho.rescuen
-2. Multilayer Online Examination System (JavaScript, DBMS/SQL, REST API)
-   - Live Demo: https://online-exam-system-multilayer.netlify.app/
-3. Automated Microservices & DevOps CI/CD Pipeline (Docker, Linux, GitHub Actions)
-   - GitHub Repository: https://github.com/Durgadas-Karmakar
-
-===========================================================
-Generated from official portfolio of Durgadas Karmakar
-===========================================================`;
-
-      const blob = new Blob([cvText], { type: 'text/plain;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
+      // Download the real PDF resume kept in the repo
       const a = document.createElement('a');
-      a.href = url;
-      a.download = 'Durgadas_Karmakar_Resume_Official.txt';
+      a.href = 'assets/Durga_Das_Karmakar_Resume.pdf';
+      a.download = 'Durga_Das_Karmakar_Resume.pdf';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      URL.revokeObjectURL(url);
 
       showToast('📄', 'CV Downloaded', 'Durgadas Karmakar resume downloaded successfully.');
     });
@@ -1025,7 +980,7 @@ Generated from official portfolio of Durgadas Karmakar
 
   // Console Welcome Branding
   console.log(
-    '%c⚡ DURGADAS KARMAKAR | PORTFOLIO\n%cBackend Developer & DevOps Enthusiast • Information Technology\nClean High-Performance Architecture Active',
+    '%c⚡ DURGADAS KARMAKAR | PORTFOLIO\n%cFull-Stack & Flutter Developer • B.Tech IT (2027)',
     'color: #38bdf8; font-size: 16px; font-weight: bold;',
     'color: #10b981; font-size: 12px;'
   );
